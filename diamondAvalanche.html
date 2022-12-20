@@ -28,9 +28,9 @@
             <div class="score-board left"><span id="diamonds">0</span>💎</div>
             <div class="score-board right" id="life">❤️❤️❤️</div>
             <div class="menu-board">
-                <button id="refresh" class="start-game"><img src="images/refresh_icon.png"></button>
-                <button><img id="sound" src="images/sound_icon.png"></button>
-                <button><img id="music" src="images/music_icon.png"></button>
+                <button id="refresh" class="start-game"><img src="images/refresh_icon.png" alt="refresh"></button>
+                <button><img id="sound" src="images/sound_icon.png" alt="sound"></button>
+                <button><img id="music" src="images/music_icon.png" alt="music"></button>
             </div>
             <button class="start-game center" onclick="this.style.display = 'none';">התחלת המשחק</button>
             <div id="game-over">
@@ -39,6 +39,7 @@
                 <p id="high">🏆שיא חדש!</p>
                 <button class="start-game" onclick="document.getElementById('game-over').style.display = 'none';">משחק חוזר</button>
             </div>
+            <button id="full-screen"><img src="images/full_screen_icon.png" alt="full screen"></button>
             <audio id="sound-diamond"><source src="media/sound-diamond.mp3" type="audio/mpeg"></audio>
             <audio id="sound-rock"><source src="media/sound-rock.mp3" type="audio/mpeg"></audio>
             <audio id="background-music" loop><source src="media/background-music.mp3" type="audio/mpeg"></audio>

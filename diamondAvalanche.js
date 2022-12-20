@@ -120,7 +120,7 @@ function go(event) {
             rightOrLeft = true;
         }
         if (shukiRight > 0) {
-            shuki.style.right = shukiRight - 1 + '%';
+            shuki.style.right = shukiRight - 2 + '%';
             if (goInterval === undefined) {
                 shuki12();
                 goInterval = setInterval(shuki12, 500);   
@@ -132,7 +132,7 @@ function go(event) {
             rightOrLeft = false;
         }
         if (shukiRight < 90) {
-            shuki.style.right = shukiRight + 1 + '%';
+            shuki.style.right = shukiRight + 2 + '%';
             if (goInterval === undefined) {
                 shuki12();
                 goInterval = setInterval(shuki12, 500);   
@@ -217,6 +217,30 @@ musicBtn.onclick = () => {
         music = true;
         bGMusic.play();
         musicBtn.src = 'images/music_icon.png';
+    }
+}
+
+//full screen game
+let fullScreenBtn = document.getElementById('full-screen');
+fullScreenBtn.onclick = () => {
+    if (!document.fullscreenElement) {
+        if (game.requestFullscreen) {
+            game.requestFullscreen();
+        } else if (game.webkitRequestFullscreen) { /* Safari */
+            game.webkitRequestFullscreen();
+        } else if (game.msRequestFullscreen) { /* IE11 */
+            game.msRequestFullscreen();
+        }
+        fullScreenBtn.querySelector('img').src = 'images/exit_full_screen_icon.png';
+    } else {
+        if (document.exitFullscreen) {
+            document.exitFullscreen();
+        } else if (document.webkitExitFullscreen) { /* Safari */
+            document.webkitExitFullscreen();
+        } else if (document.msExitFullscreen) { /* IE11 */
+            document.msExitFullscreen();
+        }
+        fullScreenBtn.querySelector('img').src = 'images/full_screen_icon.png';
     }
 }
 
