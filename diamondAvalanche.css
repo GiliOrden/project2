@@ -1,0 +1,206 @@
+.game {
+    background-color: hsl(203, 92%, 90%);
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: 100%;
+}
+
+.diamond  {
+    height: 14%;
+    top: -14%;
+    background-image: url('images/diamond.png');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    position: relative;
+    font-size: 60px;
+    display: inline-block;
+}
+
+.rock {
+    background-image: url('images/rock.png');
+}
+
+.score-board {
+    position: absolute;
+    top: 0;
+    font-size: 20px;
+    width: 5em;
+    height: 1.5em;
+    background-color: hsl(197, 71%, 97%);
+    border: 2px hsl(197, 71%, 65%) solid;
+    border-top: none;
+    text-align: center;
+}
+
+.left {
+    left: 0;
+    border-left: none;
+    border-bottom-right-radius: 10px;
+}
+
+.right {
+    right: 0;
+    border-right: none;
+    border-bottom-left-radius: 10px;
+}
+
+.menu-board {
+    position: absolute;
+    top: 0;
+    height: 1.8em;
+    width: 20%;
+    font-size: 20px;
+    background-color: hsl(255, 76%, 63%);
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    text-align: center;
+    right: 40%;
+    opacity: 0.7;
+    visibility: hidden;
+}
+
+.menu-board button {
+    width: 1.3em;
+    height: 1.3em;
+    margin: 0.25em auto;
+    border-radius: 50%;
+    background-color: hsl(255, 76%, 30%);
+    border: none;
+}
+
+.menu-board button img {
+    width: 100%;
+    height: 100%;
+}
+
+#shuki {
+    width: 10%;
+    right: 45%;
+    height: 25%;
+    bottom: 0;
+    position: absolute;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-image: url("images/shuki1.png");
+}
+
+@keyframes shuki-go1 {
+    0% { background-image: url('images/shuki1.png'); }
+    16.667% { background-image: url('images/shuki2.png'); }
+    33.333% { background-image: url('images/shuki3.png'); }
+    50% { background-image: url('images/shuki4.png'); }
+    66.667% { background-image: url('images/shuki5.png'); }
+    83.333% { background-image: url('images/shuki6.png'); }
+    100% { background-image: url('images/shuki7.png'); }
+}
+
+@keyframes shuki-go2 {
+    0% { background-image: url('images/shuki7.png'); }
+    16.667% { background-image: url('images/shuki8.png'); }
+    33.333% { background-image: url('images/shuki9.png'); }
+    50% { background-image: url('images/shuki10.png'); }
+    66.667% { background-image: url('images/shuki11.png'); }
+    83.333% { background-image: url('images/shuki12.png'); }
+    100% { background-image: url('images/shuki1.png'); }
+}
+
+#shuki.shuki1 {
+    animation: shuki-go1 500ms linear 1;
+    animation-fill-mode: both;
+}
+
+#shuki.shuki2 {
+    animation: shuki-go2 500ms linear 1;
+    animation-fill-mode: both;
+}
+
+button{
+    padding: 5px;
+    background-color: rgba(89, 43, 226);
+    color: white;
+    font-weight: bolder;
+    font-size: 20px;
+    border-radius: 5px;
+    border:2px hsl(255, 76%, 30%) outset;
+}
+
+button.center {
+    position: absolute;
+    top: 40%;
+    left: 30%;
+    width: 40%;
+    z-index: 1;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+#game-over {
+    top: 25%;
+    left: 20%;
+    width: 60%;
+    z-index: 2;
+    padding: 10px;
+    background-color: rgba(89, 43, 226, 0.757);
+    font-size: 30px;
+    border-radius: 15px;
+    border: 5px rgba(89, 43, 226) outset;
+    position: absolute;
+    color: white;
+    display: none;
+}
+
+#game-over button {
+    width: 90%;
+    right: 5%;
+    position: relative;
+}
+
+#game-over p {
+    margin: 1px;
+}
+
+#high {
+    font-size: 40px;
+}
+
+@media only screen and (max-width: 810px) {
+    #game-over {
+        font-size: 25px;
+        top: 20%;
+    }
+
+    #high {
+        font-size: 35px;
+    }
+
+    .menu-board button, .score-board {
+        font-size: 18px;
+    }
+}
+
+@media only screen and (max-width: 680px) {
+    #game-over {
+        font-size: 20px;
+        top: 20%;
+    }
+
+    #high {
+        font-size: 30px;
+    }
+
+    .menu-board button, .score-board {
+        font-size: 16px;
+    }
+}
+
+@media only screen and (max-width: 560px) {
+    #game-over {
+        left: 7%;
+        width: 80%;
+    }
+    .menu-board button, .score-board {
+        font-size: 14px;
+    }
+}

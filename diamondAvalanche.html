@@ -1,0 +1,49 @@
+<!--page for the game diamond avalanche-->
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <link href="diamondAvalanche.css" rel="stylesheet" type="text/css">
+    <title>מפולת יהלומים</title>
+</head>
+<body>
+    <main>
+        <h1>מפולת יהלומים</h1>
+        <p>שוקי הלך למכרה היהלומים, אך לפתע החלה מפולת במכרה. עזרו לשוקי לאסוף כמה שיותר יהלומים מבלי להיפגע מהסלעים. הזיזו את שוקי בעזרת החיצים ימינה ושמאלה.</p>
+        <div class="game">
+            <div class="diamond"></div>
+            <div class="diamond"></div>
+            <div class="diamond"></div>
+            <div class="diamond"></div>
+            <div class="diamond"></div>
+            <div class="diamond"></div>
+            <div class="diamond"></div>
+            <div class="diamond"></div>
+            <div class="diamond"></div>
+            <div class="diamond"></div>
+            <div id="shuki" alt="shuki"></div>
+            <div class="score-board left"><span id="diamonds">0</span>💎</div>
+            <div class="score-board right" id="life">❤️❤️❤️</div>
+            <div class="menu-board">
+                <button id="refresh" class="start-game"><img src="images/refresh_icon.png"></button>
+                <button><img id="sound" src="images/sound_icon.png"></button>
+                <button><img id="music" src="images/music_icon.png"></button>
+            </div>
+            <button class="start-game center" onclick="this.style.display = 'none';">התחלת המשחק</button>
+            <div id="game-over">
+                <p>המשחק נגמר!</p>
+                <p>הצלחתם לאסוף <span id="diamonds-final">0</span> יהלומים💎</p>
+                <p id="high">🏆שיא חדש!</p>
+                <button class="start-game" onclick="document.getElementById('game-over').style.display = 'none';">משחק חוזר</button>
+            </div>
+            <audio id="sound-diamond"><source src="media/sound-diamond.mp3" type="audio/mpeg"></audio>
+            <audio id="sound-rock"><source src="media/sound-rock.mp3" type="audio/mpeg"></audio>
+            <audio id="background-music" loop><source src="media/background-music.mp3" type="audio/mpeg"></audio>
+        </div>
+    </main>
+</body>
+<script src="diamondAvalanche.js"></script>
+</html>
