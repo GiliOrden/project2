@@ -61,12 +61,16 @@ function falling(index) {
                 shukiCol + 1 > index && shukiCol + 1 < index + 1) {
                 if (diamond.classList.contains('rock')) {
                     if(sound) {
+                        soundRock.pause();
+                        soundRock.currentTime = 0;
                         soundRock.play();
                     }
                     life--;
                     scoreLife.textContent = scoreLife.textContent.replace('❤️', '');
                 } else {
                     if(sound) {
+                        soundDiamond.pause();
+                        soundDiamond.currentTime = 0;
                         soundDiamond.play();
                     }
                     numDiamonds++;
