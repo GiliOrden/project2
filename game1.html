@@ -4,173 +4,182 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <link rel="stylesheet" href="style.css" /> -->
     <link rel="stylesheet" href="game1.css" />
     <title>Memory game</title>
   </head>
   <body>
-    <div class="wrapper">
-      <ul class="cards">
-        <li class="card">
-          <div class="view front-view">
-            <img src="flags_pic/question-mark.png" />
-          </div>
-          <div class="view back-view">
-            <img src="flags_pic/flag1.png" />
-          </div>
-        </li>
-        <li class="card">
-          <div class="view front-view">
-            <img src="flags_pic/question-mark.png" />
-          </div>
-          <div class="view back-view">
-            <img src="flags_pic/flag2.png" />
-          </div>
-        </li>
-        <li class="card">
-          <div class="view front-view">
-            <img src="flags_pic/question-mark.png" />
-          </div>
-          <div class="view back-view">
-            <img src="flags_pic/flag3.png" />
-          </div>
-        </li>
-        <li class="card">
-          <div class="view front-view">
-            <img src="flags_pic/question-mark.png" />
-          </div>
-          <div class="view back-view">
-            <img src="flags_pic/flag4.png" />
-          </div>
-        </li>
-        <li class="card">
-          <div class="view front-view">
-            <img src="flags_pic/question-mark.png" />
-          </div>
-          <div class="view back-view">
-            <img src="flags_pic/flag5.png" />
-          </div>
-        </li>
-        <li class="card">
-          <div class="view front-view">
-            <img src="flags_pic/question-mark.png" />
-          </div>
-          <div class="view back-view">
-            <img src="flags_pic/flag6.png" />
-          </div>
-        </li>
-        <li class="card">
-          <div class="view front-view">
-            <img src="flags_pic/question-mark.png" />
-          </div>
-          <div class="view back-view">
-            <img src="flags_pic/flag7.png" />
-          </div>
-        </li>
-        <li class="card">
-          <div class="view front-view">
-            <img src="flags_pic/question-mark.png" />
-          </div>
-          <div class="view back-view">
-            <img src="flags_pic/flag8.png" />
-          </div>
-        </li>
-        <li class="card">
-          <div class="view front-view">
-            <img src="flags_pic/question-mark.png" />
-          </div>
-          <div class="view back-view">
-            <img src="flags_pic/flag9.png" />
-          </div>
-        </li>
-        <li class="card">
-          <div class="view front-view">
-            <img src="flags_pic/question-mark.png" />
-          </div>
-          <div class="view back-view">
-            <img src="flags_pic/flag10.png" />
-          </div>
-        </li>
-        <li class="card">
-          <div class="view front-view">
-            <img src="flags_pic/question-mark.png" />
-          </div>
-          <div class="view back-view">
-            <img src="flags_pic/flag1.png" />
-          </div>
-        </li>
-        <li class="card">
-          <div class="view front-view">
-            <img src="flags_pic/question-mark.png" />
-          </div>
-          <div class="view back-view">
-            <img src="flags_pic/flag2.png" />
-          </div>
-        </li>
-        <li class="card">
-          <div class="view front-view">
-            <img src="flags_pic/question-mark.png" />
-          </div>
-          <div class="view back-view">
-            <img src="flags_pic/flag3.png" />
-          </div>
-        </li>
-        <li class="card">
-          <div class="view front-view">
-            <img src="flags_pic/question-mark.png" />
-          </div>
-          <div class="view back-view">
-            <img src="flags_pic/flag4.png" />
-          </div>
-        </li>
-        <li class="card">
-          <div class="view front-view">
-            <img src="flags_pic/question-mark.png" />
-          </div>
-          <div class="view back-view">
-            <img src="flags_pic/flag5.png" />
-          </div>
-        </li>
-        <li class="card">
-          <div class="view front-view">
-            <img src="flags_pic/question-mark.png" />
-          </div>
-          <div class="view back-view">
-            <img src="flags_pic/flag6.png" />
-          </div>
-        </li>
-        <li class="card">
-          <div class="view front-view">
-            <img src="flags_pic/question-mark.png" />
-          </div>
-          <div class="view back-view">
-            <img src="flags_pic/flag7.png" />
-          </div>
-        </li>
-        <li class="card">
-          <div class="view front-view">
-            <img src="flags_pic/question-mark.png" />
-          </div>
-          <div class="view back-view">
-            <img src="flags_pic/flag8.png" />
-          </div>
-        </li>
-        <li class="card">
-          <div class="view front-view">
-            <img src="flags_pic/question-mark.png" />
-          </div>
-          <div class="view back-view">
-            <img src="flags_pic/flag9.png" />
-          </div>
-        </li>
-        <li class="card">
-          <div class="view front-view">
-            <img src="flags_pic/question-mark.png" />
-          </div>
-          <div class="view back-view">
-            <img src="flags_pic/flag10.png" />
-          </div>
-        </li>
-      </ul>
+    <main>
+      <h1>משחק זיכרון</h1>
+      <p>
+        שוקי הלך למכרה היהלומים, אך לפתע החלה מפולת במכרה. עזרו לשוקי לאסוף כמה
+        שיותר יהלומים מבלי להיפגע מהסלעים. הזיזו את שוקי בעזרת החיצים ימינה
+        ושמאלה.
+      </p>
+      <div class="wrapper">
+        <ul class="cards">
+          <li class="card">
+            <div class="view front-view">
+              <img src="flags_pic/question-mark.png" />
+            </div>
+            <div class="view back-view">
+              <img src="flags_pic/flag1.png" />
+            </div>
+          </li>
+          <li class="card">
+            <div class="view front-view">
+              <img src="flags_pic/question-mark.png" />
+            </div>
+            <div class="view back-view">
+              <img src="flags_pic/flag2.png" />
+            </div>
+          </li>
+          <li class="card">
+            <div class="view front-view">
+              <img src="flags_pic/question-mark.png" />
+            </div>
+            <div class="view back-view">
+              <img src="flags_pic/flag3.png" />
+            </div>
+          </li>
+          <li class="card">
+            <div class="view front-view">
+              <img src="flags_pic/question-mark.png" />
+            </div>
+            <div class="view back-view">
+              <img src="flags_pic/flag4.png" />
+            </div>
+          </li>
+          <li class="card">
+            <div class="view front-view">
+              <img src="flags_pic/question-mark.png" />
+            </div>
+            <div class="view back-view">
+              <img src="flags_pic/flag5.png" />
+            </div>
+          </li>
+          <li class="card">
+            <div class="view front-view">
+              <img src="flags_pic/question-mark.png" />
+            </div>
+            <div class="view back-view">
+              <img src="flags_pic/flag6.png" />
+            </div>
+          </li>
+          <li class="card">
+            <div class="view front-view">
+              <img src="flags_pic/question-mark.png" />
+            </div>
+            <div class="view back-view">
+              <img src="flags_pic/flag7.png" />
+            </div>
+          </li>
+          <li class="card">
+            <div class="view front-view">
+              <img src="flags_pic/question-mark.png" />
+            </div>
+            <div class="view back-view">
+              <img src="flags_pic/flag8.png" />
+            </div>
+          </li>
+          <li class="card">
+            <div class="view front-view">
+              <img src="flags_pic/question-mark.png" />
+            </div>
+            <div class="view back-view">
+              <img src="flags_pic/flag9.png" />
+            </div>
+          </li>
+          <li class="card">
+            <div class="view front-view">
+              <img src="flags_pic/question-mark.png" />
+            </div>
+            <div class="view back-view">
+              <img src="flags_pic/flag10.png" />
+            </div>
+          </li>
+          <li class="card">
+            <div class="view front-view">
+              <img src="flags_pic/question-mark.png" />
+            </div>
+            <div class="view back-view">
+              <img src="flags_pic/flag1.png" />
+            </div>
+          </li>
+          <li class="card">
+            <div class="view front-view">
+              <img src="flags_pic/question-mark.png" />
+            </div>
+            <div class="view back-view">
+              <img src="flags_pic/flag2.png" />
+            </div>
+          </li>
+          <li class="card">
+            <div class="view front-view">
+              <img src="flags_pic/question-mark.png" />
+            </div>
+            <div class="view back-view">
+              <img src="flags_pic/flag3.png" />
+            </div>
+          </li>
+          <li class="card">
+            <div class="view front-view">
+              <img src="flags_pic/question-mark.png" />
+            </div>
+            <div class="view back-view">
+              <img src="flags_pic/flag4.png" />
+            </div>
+          </li>
+          <li class="card">
+            <div class="view front-view">
+              <img src="flags_pic/question-mark.png" />
+            </div>
+            <div class="view back-view">
+              <img src="flags_pic/flag5.png" />
+            </div>
+          </li>
+          <li class="card">
+            <div class="view front-view">
+              <img src="flags_pic/question-mark.png" />
+            </div>
+            <div class="view back-view">
+              <img src="flags_pic/flag6.png" />
+            </div>
+          </li>
+          <li class="card">
+            <div class="view front-view">
+              <img src="flags_pic/question-mark.png" />
+            </div>
+            <div class="view back-view">
+              <img src="flags_pic/flag7.png" />
+            </div>
+          </li>
+          <li class="card">
+            <div class="view front-view">
+              <img src="flags_pic/question-mark.png" />
+            </div>
+            <div class="view back-view">
+              <img src="flags_pic/flag8.png" />
+            </div>
+          </li>
+          <li class="card">
+            <div class="view front-view">
+              <img src="flags_pic/question-mark.png" />
+            </div>
+            <div class="view back-view">
+              <img src="flags_pic/flag9.png" />
+            </div>
+          </li>
+          <li class="card">
+            <div class="view front-view">
+              <img src="flags_pic/question-mark.png" />
+            </div>
+            <div class="view back-view">
+              <img src="flags_pic/flag10.png" />
+            </div>
+          </li>
+        </ul>
+      </div>
       <!-- timer -->
       <div class="details">
         <p class="time">
@@ -181,8 +190,7 @@
         </p>
         <button>Refresh</button>
       </div>
-    </div>
-
+    </main>
     <script src="game1.js"></script>
   </body>
 </html>

@@ -9,12 +9,28 @@ body {
   align-items: center;
   justify-content: center;
   min-height: 100vh;
-  background: rgb(184, 130, 237);
+  background: rgb(255, 255, 255);
+}
+main {
+  padding: 50px 6% 120px;
+}
+
+h1 {
+  color: blueviolet;
+  text-align: center;
+}
+
+main p {
+  max-width: 800px;
+  text-align: center;
+  margin: 20px auto;
 }
 .wrapper {
+  margin: auto;
+  margin-bottom: 15px;
   height: 400px;
   width: 500px;
-  background: wheat;
+  background: hsl(203, 92%, 90%);
   border-radius: 10px;
   padding: 25px;
 }
@@ -51,9 +67,9 @@ body {
   pointer-events: none;
   user-select: none;
   position: absolute;
-  background-color: rgb(202, 45, 45);
+  background-color: hsl(0, 0%, 100%);
   border-radius: 7px;
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0, 2);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s linear;
   backface-visibility: hidden;
 }
@@ -91,28 +107,33 @@ body {
 }
 /* for the timer */
 .details {
-  width: 100%;
-  margin-top: 15px;
-  padding: 0 20px;
+  width: 500px;
+  height: 50px;
+
   border-radius: 7px;
   background: #fff;
-  height: calc(100% / 4 - 30px);
+  margin: auto;
+  display: flex;
+
   justify-content: space-between;
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
 }
 .details p {
+  width: 30%;
+
   font-size: 18px;
-  height: 17px;
-  padding-right: 18px;
+  /* height: 17px;
+  padding-right: 18px; */
   border-right: 1px solid #ccc;
 }
-.details p span {
+/* .details p span {
   margin-left: 8px;
-}
+} */
 .details p b {
   font-weight: 500;
 }
 .details button {
+  width: 30%;
   cursor: pointer;
   font-size: 14px;
   color: #6563ff;
