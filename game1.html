@@ -12,9 +12,7 @@
     <main>
       <h1>משחק זיכרון</h1>
       <p>
-        שוקי הלך למכרה היהלומים, אך לפתע החלה מפולת במכרה. עזרו לשוקי לאסוף כמה
-        שיותר יהלומים מבלי להיפגע מהסלעים. הזיזו את שוקי בעזרת החיצים ימינה
-        ושמאלה.
+        נסו למצוא את כל הזוגות של הדגלים, שימו לב שמספר המיסיונות שלכם מוגבל😎
       </p>
       <div class="wrapper">
         <ul class="cards">
@@ -180,17 +178,20 @@
           </li>
         </ul>
       </div>
-      <!-- timer -->
+      <!-- timer ,num of flips and refresh -->
       <div class="details">
-        <p class="time">
-          Time: <span><b>20</b>s</span>
-        </p>
+        <p class="timer">Time: <b>00:00</b>s</p>
         <p class="flips">
-          Flips: <span><b>0</b></span>
+          Left Flips: <span><b id="left_flips">60</b></span>
         </p>
-        <button>Refresh</button>
+        <button id="refresh">Refresh</button>
       </div>
     </main>
+    <!-- jump message for the end of the game -->
+    <div id="game-over" class="hide-message">
+      <p><b></b></p>
+      <button class="start-game">start</button>
+    </div>
     <script src="game1.js"></script>
   </body>
 </html>
