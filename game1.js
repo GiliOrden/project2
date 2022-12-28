@@ -73,7 +73,9 @@ function ceckMatch(card1Img, card2Img) {
     card2.classList.remove("shake", "flip");
     // setting the both cards to be null
     card1 = card2 = "";
-    disable = false;
+    if (leftFlips !== 0) {
+      return (disable = false);
+    }
   }, 1300);
 }
 //starting/refreshing all the game
