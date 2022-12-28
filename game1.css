@@ -2,7 +2,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "sans-serif";
 }
 body {
   width: 100%;
@@ -15,16 +14,6 @@ main {
   width: 100%;
 }
 
-h1 {
-  color: blueviolet;
-  text-align: center;
-}
-
-main p {
-  max-width: 800px;
-  text-align: center;
-  margin: 20px auto;
-}
 .wrapper {
   margin: auto;
   margin-bottom: 15px;
