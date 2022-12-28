@@ -123,13 +123,8 @@ main p {
   width: 30%;
 
   font-size: 18px;
-  /* height: 17px;
-  padding-right: 18px; */
   border-right: 1px solid #ccc;
 }
-/* .details p span {
-  margin-left: 8px;
-} */
 .details p b {
   font-weight: 500;
 }
@@ -183,6 +178,7 @@ button {
   color: red;
   font-weight: bold;
 }
+/* for size of scren phone */
 @media only screen and (max-width: 500px) {
   main {
     padding: 0 0 0;
@@ -214,3 +210,4 @@ button {
   .details p {
     font-size: 14px;
   }
+}
