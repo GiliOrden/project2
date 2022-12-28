@@ -5,7 +5,7 @@ let card1, card2;
 let disable = false;
 let numOfMatches = 0;
 let timer;
-let leftFlips = 20;
+let leftFlips = 40;
 
 function flipingCard(e) {
   let clickCard = e.target;
@@ -78,7 +78,7 @@ function finishCards() {
   numOfMatches = 0;
   disable = false;
   card1 = card2 = "";
-  leftFlips = 20;
+  leftFlips = 40;
   document.getElementById("left_flips").innerHTML = leftFlips;
   let message = document.getElementById("game-over");
   message.classList.add("hide-message");
