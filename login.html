@@ -6,21 +6,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="style.css" rel="stylesheet" type="text/css">
-    <link href="login.css" rel="stylesheet" type="text/css">
+    <link href="form.css" rel="stylesheet" type="text/css">
     <title>התחברות - אתר המשחקים הגדול</title>
 </head>
 <body>
     <header>
         <nav>
-            <div><a href="index.html" id="home-link" class="no-decoration">אתר המשחקים הגדול</a></div>
+            <div><a href="main.html" id="home-link" class="no-decoration">אתר המשחקים הגדול</a></div>
             <div  id="login" class="left-nav"><a href="login.html"  class="no-decoration">התחברות</a></div>
-            <div id="logout" class="left-nav">שלום, <a id="profile" href="profile.html"></a> (<a href="logout.html">התנתקות</a>)</div>
+            <div id="logout" class="left-nav">שלום, <a id="profile" href="profile.html"></a> (<a id="logout-link" href="main.html">התנתקות</a>)</div>
         </nav>
         <script src="header.js"></script>
     </header>
     <main>
         <h1>התחברות</h1>
-        <form action="index.html" method="post" onsubmit="return login()">
+        <form action="main.html" method="post" onsubmit="return login()">
             <div>
                 <label for="username">שם משתמש:</label>
                 <input type="text" id="username" name="username" pattern="\w{3,20}" required>
@@ -31,7 +31,7 @@
             </div>
             <button type="submit">כניסה</button>
         </form>
-        <p>אין לכם עדיין חשבון? לחצו כאן ל<a href="createAcount.html">הרשמה</a>.</p>
+        <p>אין לכם עדיין חשבון? לחצו כאן ל<a href="signUp.html">הרשמה</a>.</p>
     </main>
 </body>
 <script src="login.js"></script>

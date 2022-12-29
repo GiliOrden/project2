@@ -1,10 +1,9 @@
 /**
  * script for login
  */
-//localStorage.users = JSON.stringify({tchelet: {password: "1234"}});
 /**
  * returns the value of selected cookie of the document
- * @param {name of cookie} cname 
+ * @param {name of a cookie} cname 
  * @returns the value of the cookie
  */
 function getCookie(cname) {
@@ -58,12 +57,12 @@ function login() {
             users[username].passwordAttempts++;
             localStorage.users = JSON.stringify(users);
         }
-        //if it is the 20th attempt, the user blocked
-        if (user.passwordAttempts > 20) {
+        //if it is the 5th attempt, the user blocked
+        if (users[username].passwordAttempts >= 5) {
             const d = new Date();
             d.setTime(d.getTime() + (12*60*60*1000));//12 hours
-            document.cookie =
-             `username=${username};expires=${d.toUTCString()};path=/`
+            document.cookie = "username=" + username + ";expires=" + 
+            d.toUTCString(); //+ ";path=/";
             users[username].passwordAttempts = 0;
             localStorage.users = JSON.stringify(users);
             alert("נחסמתם מהאתר ל-12 שעות");
