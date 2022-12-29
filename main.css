@@ -1,0 +1,98 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  min-height: 100vh;
+  background-color: black;
+  font-family: "Poppins", sans-serif;
+  /* לשים לב לזה */
+  position: relative;
+}
+.background {
+  position: fixed;
+  z-index: 10;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+.bubbles {
+  position: relative;
+  display: flex;
+}
+.bubbles span {
+  position: relative;
+  width: 30px;
+  height: 30px;
+  background-color: aqua;
+  margin: 0 4px;
+  border-radius: 50%;
+  box-shadow: 0 0 10px aqua, 0 0 50px aqua, 0 0 100px aqua;
+  animation: bubblesAnimate 15s linear infinite;
+  animation-duration: calc(125s / var(--i));
+}
+.bubbles span:nth-child(even) {
+  background-color: rgb(255, 0, 145);
+
+  box-shadow: 0 0 10px rgb(255, 0, 145), 0 0 50px rgb(255, 0, 145),
+    0 0 100px rgb(255, 0, 145);
+}
+@keyframes bubblesAnimate {
+  0% {
+    transform: translateY(100vh) scale(0);
+  }
+  100% {
+    transform: translateY(-10vh) scale(1);
+  }
+}
+.content {
+  position: absolute;
+  z-index: 12;
+  width: 100vw;
+  text-align: center;
+  margin-top: 40vh;
+}
+.main-title {
+  position: relative;
+}
+.title {
+  position: relative;
+  font-size: 4em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: transparent;
+  /* the kind of white border of the letters */
+  -webkit-text-stroke: 1px white;
+  letter-spacing: 2px;
+}
+.title::before {
+  /* they both in the same place */
+  position: absolute;
+  content: attr(data-text);
+  color: white;
+  /* box-shadow: 0 0 10px white; */
+  filter: drop-shadow(0 0 10px white);
+  width: 0;
+  /* wil take only 1 line */
+  white-space: nowrap;
+  overflow: hidden;
+  transition: 1s;
+  border-right: 8px solid white;
+}
+.title:hover::before {
+  width: 100%;
+}
+.games {
+  position: relative;
+  margin-top: 50vh;
+  display: grid;
+  padding: 50px;
+  color: aliceblue;
+}
+
+@media only screen and (max-width: 800px) {
+  .bubbles span:nth-child(3n + 0) {
+    display: none;
+  }
+}
