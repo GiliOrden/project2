@@ -1,0 +1,29 @@
+form.big {
+    max-width: 400px;
+}
+
+form.big div {
+    width: 89%;
+}
+
+.inline-flex {
+    display: inline-flex;
+    margin: 0;
+}
+
+form button.little {
+    width: 1.5em;
+    height: 1.5em;
+    margin: 0 5px 0 0;
+    border-radius: 50%;
+}
+
+.out {
+    position: relative;
+    top: 3px;
+}
+
+button img {
+    width: 100%;
+    height: 100%;
+}

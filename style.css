@@ -60,24 +60,3 @@ main p {
     text-align: center;
     margin: 20px auto;
 }
-
-.game {
-    max-width: 800px;
-    position: relative;
-    margin: 20px auto;
-    height: 450px;
-    border: 1px black solid;
-    overflow: hidden;
-}
-
-@media only screen and (max-width: 750px) {
-    .game {
-        height: 350px;
-    }
-}
-
-@media only screen and (max-width: 550px) {
-    .game {
-        height: 250px;
-    }
-}

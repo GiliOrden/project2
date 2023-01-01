@@ -1,6 +1,6 @@
 form {
     width: 100%;
-    max-width: 350px;
+    max-width: 360px;
     margin: 0 auto;
 }
 
@@ -20,7 +20,7 @@ form div input {
 
 form div label {
     align-self: center;
-    width: 6.1em;
+    width: 6.6em;
 }
 
 form button {

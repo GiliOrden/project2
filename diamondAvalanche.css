@@ -3,6 +3,12 @@
     display: grid;
     grid-template-columns: repeat(10, 1fr);
     grid-template-rows: 100%;
+    max-width: 800px;
+    position: relative;
+    margin: 20px auto;
+    height: 450px;
+    border: 1px black solid;
+    overflow: hidden;
 }
 
 .diamond  {
@@ -169,6 +175,18 @@ button:hover {
 
 #high {
     font-size: 40px;
+}
+
+@media only screen and (max-width: 750px) {
+    .game {
+        height: 350px;
+    }
+}
+
+@media only screen and (max-width: 550px) {
+    .game {
+        height: 250px;
+    }
 }
 
 @media only screen and (max-width: 810px) {
