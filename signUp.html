@@ -30,7 +30,7 @@
             </div>
             <div>
                 <label for="password">סיסמא: </label>
-                <input type="password" id="password" name="password" placeholder="כולל אות אנגלית קטנה וגדולה, ומספר" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{3,20}" required>
+                <input type="password" id="password" name="password" placeholder="כולל אות אנגלית קטנה וגדולה, ומספר" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{3,20}" required onchange="confirmPassword()">
             </div>
             <div>
                 <label for="password">אימות סיסמא: </label>

@@ -14,14 +14,26 @@ password.value = user.password;
 email.value = user.email;
 phone.value = user.phone;
 
+const check = {
+    email: /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i,
+    tel: /^[+]*[(]{0,1}[0-9]{1,3}[)]{0,1}[-\s\./0-9]*$/g,
+    text: /.+/,
+    password: /(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{3,20}/};
+
 function enable() {
     this.previousElementSibling.readOnly = false;
 }
 
 function edit() {
-    users[localStorage.user][this.name] = this.value;
-    localStorage.users = JSON.stringify(users);
-    this.readOnly = true;
+    if(check[this.type].test(this.value)) {
+        this.style.border = "";
+        users[localStorage.user][this.name] = this.value;
+        localStorage.users = JSON.stringify(users);
+        this.readOnly = true;
+    } else {
+        this.style.border = "2px red solid"
+        alert("התאימו את הקלט לתבנית הרצויה");
+    }
 }
 
 function editPassword() {
@@ -37,15 +49,17 @@ function notSeePassword() {
 }
 
 function confirmPassword() {
-    if (password.value === password2.value) {
-        if (/(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{3,20}/.test(password.value)) {
-            edit.call(password);
-            conPass.style.display = "none";
+    if (password.value !== "" && password2.value !== "") {
+        if (password.value === password2.value) {
+            if (/(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{3,20}/.test(password.value)) {
+                edit.call(password);
+                conPass.style.display = "none";
+            } else {
+                alert("הסיסמא חייבת לכלול אות אנגלית גדולה, אות אנגלית קטנה, ומספר, ולא יכולה להיות יותר מ-20 תווים")
+            }
         } else {
-            alert("הסיסמא חייבת לכלול אות אנגלית גדולה, אות אנגלית קטנה, ומספר, ולא יכולה להיות יותר מ-20 תווים")
+            alert("הסיסמאות אינן זהות");
         }
-    } else {
-        alert("הסיסמאות אינן זהות");
     }
 }
 
@@ -58,7 +72,7 @@ for(let i = 0; i < buttons.length; i++) {
 
 let editPass = document.getElementById("edit-pass");
 editPass.addEventListener("click", editPassword);
-editPass.previousElementSibling.onchange = ()=>{};
+editPass.previousElementSibling.onchange = confirmPassword;
 
 let seePass = document.getElementById("see-pass");
 seePass.addEventListener("mousedown", seePassword);

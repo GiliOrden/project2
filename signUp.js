@@ -27,11 +27,13 @@ function signUp() {
 function confirmPassword() {
     let password = document.getElementById("password");
     let password2 = document.getElementById("password2");
-    if (password.value !== password2.value) {
-        password.style.border = "2px red solid";
-        password2.style.border = "2px red solid";
-    } else {
-        password.style.border = "2px green solid";
-        password2.style.border = "2px green solid";
+    if (password.value !== "" && password2.value !== "") {
+        if (password.value !== password2.value) {
+            password.style.border = "2px red solid";
+            password2.style.border = "2px red solid";
+        } else {
+            password.style.border = "2px green solid";
+            password2.style.border = "2px green solid";
+        }
     }
 }
