@@ -1,3 +1,11 @@
+/**
+ * script for sign up
+ */
+
+/**
+ * add the user to the users if valid
+ * @returns whether the user valid
+ */
 function signUp() {
     let name = document.getElementById("name").value;
     let username = document.getElementById("username").value;
@@ -24,6 +32,7 @@ function signUp() {
     localStorage.users = JSON.stringify(users);
 }
 
+//confirm password
 function confirmPassword() {
     let password = document.getElementById("password");
     let password2 = document.getElementById("password2");

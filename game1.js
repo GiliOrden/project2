@@ -1,6 +1,7 @@
 const cards = document.querySelectorAll(".card");
 const clock = document.querySelector(".timer b");
 const startGame = document.querySelector(".start-game");
+const users = JSON.parse(localStorage.users);
 let card1, card2;
 let disable = false;
 let numOfMatches = 0;
@@ -36,6 +37,8 @@ function flipingCard(e) {
       //stop the timer
       clearInterval(timer);
       setTimeout(() => {
+        users[localStorage.user].memoryGame.high = -1;
+        localStorage.users = JSON.stringify(users);
         return messagesOfTheGame("You are such a loser😒");
       }, 2500);
     }
@@ -51,6 +54,19 @@ function ceckMatch(card1Img, card2Img) {
       //stop the timer
       clearInterval(timer);
       setTimeout(() => {
+        let high; let current;
+        if (users[localStorage.user].memoryGame.high !== undefined &&
+          users[localStorage.user].memoryGame.high !== -1) {
+          high = users[localStorage.user].memoryGame.high.split(":");
+          current = clock.textContent.split(":");
+        }
+        if (users[localStorage.user].memoryGame.high === undefined ||
+          users[localStorage.user].memoryGame.high === -1 ||
+           Number(current[0]) < Number(high[0]) || 
+           Number(current[0]) == Number(high[0]) && Number(current[1]) < Number(high[1])) {
+            users[localStorage.user].memoryGame.high = clock.textContent;
+            localStorage.users = JSON.stringify(users);
+        }
         return messagesOfTheGame(
           `You won the game!🤩<br> Time passed: ${clock.innerHTML} s`
         );
@@ -80,6 +96,12 @@ function ceckMatch(card1Img, card2Img) {
 }
 //starting/refreshing all the game
 function startAllGame() {
+  if (users[localStorage.user].memoryGame !== undefined) {
+      users[localStorage.user].memoryGame.date = new Date().toString();
+  } else {
+      users[localStorage.user].memoryGame = {date: new Date().toString()};
+  }
+  localStorage.users = JSON.stringify(users);
   numOfMatches = 0;
   disable = false;
   card1 = card2 = "";
