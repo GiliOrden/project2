@@ -86,13 +86,112 @@ body {
 .games {
   position: relative;
   margin-top: 50vh;
+  /* לבדוק על זה!! */
+  flex-wrap: wrap;
   display: grid;
   padding: 50px;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-row-gap: 20px;
+  grid-column-gap: 20px;
+}
+.games .game {
   color: aliceblue;
+  position: relative;
+  height: 300px;
+  transition: 0.5s;
+  background-image: linear-gradient(315deg, rgb(19, 221, 19), rgb(0, 217, 255));
+  /* filter: blur(10px); */
+}
+
+/* .games .game::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0%;
+  left: 0;
+  background-image: linear-gradient(315deg, rgb(19, 221, 19), rgb(0, 217, 255));
+
+}
+.games .game::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0%;
+  left: 0;
+  background-image: linear-gradient(315deg, rgb(19, 221, 19), rgb(0, 217, 255));
+  filter: blur(10px);
+}*/
+.games .game:nth-child(3n + 1) {
+  background-image: linear-gradient(45deg, rgb(221, 19, 157), rgb(255, 98, 0));
+}
+.games .game:nth-child(3n + 2) {
+  background-image: linear-gradient(315deg, rgb(29, 19, 221), rgb(255, 0, 132));
+}
+.games .game b {
+  position: absolute;
+  background: rgba(0, 0, 0, 0.6);
+
+  z-index: 2;
+  /* set the distance to the parent */
+  inset: 6px;
+}
+.games .game img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  z-index: 3;
+  scale: 0.8;
+  object-fit: cover;
+  opacity: 0.5;
+  transition: 0.5s;
+}
+.games .game:hover img {
+  scale: 0.6;
+  opacity: 0.9;
+  transform: translateY(-20%);
+}
+/* for unready/unopened games */
+.games .game .locked {
+  opacity: 0;
+}
+.games .game:hover .locked {
+  opacity: 0.8;
+  background: transparent;
+}
+.games .game:nth-child(1) .locked,
+.games .game:nth-child(2) .locked {
+  display: none;
+}
+
+.games .game .content {
+  position: absolute;
+  width: 100%;
+  z-index: 3;
+  bottom: 0%;
+  left: 0%;
+  transform: scale(0);
+  transition: 0.5s;
+}
+.games .game:hover .content {
+  transform: scale(1);
+  bottom: 10%;
 }
 
 @media only screen and (max-width: 800px) {
-  .bubbles span:nth-child(3n + 0) {
+  .bubbles span:nth-c2ild(3n + 0) {
     display: none;
+  }
+  .title {
+    font-size: 3em;
+  }
+  .games {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .games .game {
+    height: 200px;
   }
 }
