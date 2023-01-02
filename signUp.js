@@ -15,12 +15,14 @@ function signUp() {
         alert("הסיסמאות שהזנת אינן זהות");
         return false;
     }
+    //validate email
     let email = document.getElementById("email").value;
     if (email !== "" && 
     !/^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i.test(email)) {
         alert("כתובת הדואר האלקטרוני אינה חוקית.");
         return false;
     }
+    //validate phone number
     let phone = document.getElementById("phone").value;
     if (phone !== "" && 
     !/^[+]*[(]{0,1}[0-9]{1,3}[)]{0,1}[-\s\./0-9]*$/g.test(phone)) {
