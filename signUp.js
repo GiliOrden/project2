@@ -16,7 +16,17 @@ function signUp() {
         return false;
     }
     let email = document.getElementById("email").value;
+    if (email !== "" && 
+    !/^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i.test(email)) {
+        alert("כתובת הדואר האלקטרוני אינה חוקית.");
+        return false;
+    }
     let phone = document.getElementById("phone").value;
+    if (phone !== "" && 
+    !/^[+]*[(]{0,1}[0-9]{1,3}[)]{0,1}[-\s\./0-9]*$/g.test(phone)) {
+        alert("מספר הטלפון אינו חוקי.");
+        return false;
+    }
     let user = {name, password, email, phone};
     let users;
     if (localStorage.users === undefined) {
