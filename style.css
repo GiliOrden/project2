@@ -1,62 +1,63 @@
 body {
-    position: relative;
-    min-height: 100vh;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  position: relative;
+  min-height: 100vh;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 main {
-    padding: 50px 6% 120px;
+  padding: 50px 6% 120px;
 }
 
 header {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    font-weight: bold;
-    background-color: midnightblue;
-    padding: 0 5px;
-    z-index: 10;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  font-weight: bold;
+  background-color: midnightblue;
+  padding: 0 5px;
+  z-index: 20;
 }
 
 h1 {
-    color: blueviolet;
-    text-align: center;
+  color: blueviolet;
+  text-align: center;
 }
 
 header nav {
-    display: flex;
-    align-items: center;
-    min-height: 50px;
+  display: flex;
+  align-items: center;
+  min-height: 50px;
 }
 
 header nav div.left-nav {
-    margin-right: auto;
-    margin-left: 20px;
+  margin-right: auto;
+  margin-left: 20px;
 }
 
-header nav div, header nav div a {
-    color: rgb(255, 255, 255, 0.8);
+header nav div,
+header nav div a {
+  color: rgb(255, 255, 255, 0.8);
 }
 
 #logout {
-    display: none;
+  display: none;
 }
 
 header nav div a.no-decoration {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 #home-link {
-    transition: color 0.5s, font-size 0.5s;
+  transition: color 0.5s, font-size 0.5s;
 }
 
 #home-link:hover {
-    color: white;
-    font-size: larger;
+  color: white;
+  font-size: larger;
 }
 
 main p {
-    max-width: 800px;
-    text-align: center;
-    margin: 20px auto;
+  max-width: 800px;
+  text-align: center;
+  margin: 20px auto;
 }
