@@ -1,6 +1,7 @@
 /**
  * script for the diamond avalanche game
  */
+const users = JSON.parse(localStorage.users);
 const game = document.querySelector('.game');
 const diamonds = game.getElementsByClassName('diamond');
 const shuki = document.getElementById('shuki');
@@ -153,6 +154,12 @@ function stopGo() {
 
 //Reset all variables and attributes
 function reset() {
+    if (users[localStorage.user].diamondAvalanche !== undefined) {
+        users[localStorage.user].diamondAvalanche.date = new Date().toString();
+    } else {
+        users[localStorage.user].diamondAvalanche = {date: new Date().toString()};
+    }
+    localStorage.users = JSON.stringify(users);
     fallingSpeed = 0.1;
     rockFrequency = 15;
     stoped = false;
@@ -255,12 +262,17 @@ function gameOver() {
     let finalDiamonds = document.getElementById('diamonds-final');
     finalDiamonds.textContent = numDiamonds;
     let highBoard = document.getElementById('high');
-    let high = localStorage.high;
-    if (high !== undefined && Number(high) >= numDiamonds) {
+    let high = users[localStorage.user].diamondAvalanche;
+    if (high !== undefined && Number(high.high) >= numDiamonds) {
         highBoard.style.fontSize = 'smaller';
-        highBoard.textContent = `השיא שלכם הוא: ${high}💎`;
+        highBoard.textContent = `השיא שלכם הוא: ${high.high}💎`;
     } else {
-        localStorage.high = numDiamonds;
+        if (high === undefined) {
+            users[localStorage.user].diamondAvalanche = {high: numDiamonds};
+        } else {
+            users[localStorage.user].diamondAvalanche.high = numDiamonds;
+        }
+        localStorage.users = JSON.stringify(users);
         highBoard.style.fontSize = '';
         highBoard.textContent = '🏆שיא חדש!';
     }

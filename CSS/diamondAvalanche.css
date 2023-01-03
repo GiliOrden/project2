@@ -14,7 +14,7 @@
 .diamond  {
     height: 14%;
     top: -14%;
-    background-image: url('images/diamond.png');
+    background-image: url('../images/diamond.png');
     background-repeat: no-repeat;
     background-size: 100% 100%;
     position: relative;
@@ -23,7 +23,7 @@
 }
 
 .rock {
-    background-image: url('images/rock.png');
+    background-image: url('../images/rock.png');
 }
 
 .score-board {
@@ -99,21 +99,21 @@
     position: absolute;
     background-repeat: no-repeat;
     background-size: 100% 100%;
-    background-image: url("images/shuki1.png");
+    background-image: url("../images/shuki1.png");
 }
 
 @keyframes shuki-go1 {
-    0% { background-image: url('images/shuki1.png'); }
-    33.333% { background-image: url('images/shuki2.png'); }
-    66.667% { background-image: url('images/shuki3.png'); }
-    100% { background-image: url('images/shuki4.png'); }
+    0% { background-image: url('../images/shuki1.png'); }
+    33.333% { background-image: url('../images/shuki2.png'); }
+    66.667% { background-image: url('../images/shuki3.png'); }
+    100% { background-image: url('../images/shuki4.png'); }
 }
 
 @keyframes shuki-go2 {
-    0% { background-image: url('images/shuki4.png'); }
-    33.333% { background-image: url('images/shuki5.png'); }
-    66.667% { background-image: url('images/shuki6.png'); }
-    100% { background-image: url('images/shuki1.png'); }
+    0% { background-image: url('../images/shuki4.png'); }
+    33.333% { background-image: url('../images/shuki5.png'); }
+    66.667% { background-image: url('../images/shuki6.png'); }
+    100% { background-image: url('../images/shuki1.png'); }
 }
 
 #shuki.shuki1 {

@@ -1,6 +1,7 @@
 /**
  * script for login
  */
+  
 /**
  * returns the value of selected cookie of the document
  * @param {name of a cookie} cname 
@@ -21,7 +22,6 @@ function getCookie(cname) {
     }
     return "";
   }
-
 
 /**
  * The function that is invoked when the button is clicked
@@ -62,7 +62,7 @@ function login() {
             const d = new Date();
             d.setTime(d.getTime() + (12*60*60*1000));//12 hours
             document.cookie = "username=" + username + ";expires=" + 
-            d.toUTCString(); //+ ";path=/";
+            d.toUTCString() + ";path=/";
             users[username].passwordAttempts = 0;
             localStorage.users = JSON.stringify(users);
             alert("נחסמתם מהאתר ל-12 שעות");

@@ -4,10 +4,30 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="style.css" rel="stylesheet" type="text/css" />
-    <link rel="stylesheet" href="main.css" />
+    <link href="CSS/style.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="CSS/main.css" />
     <title>Document</title>
   </head>
+  <header dir="rtl">
+    <nav>
+      <div>
+        <a href="main.html" id="home-link" class="no-decoration"
+          >אתר המשחקים הגדול</a
+        >
+      </div>
+      <div id="login" class="left-nav">
+        <a href="login.html" class="no-decoration">התחברות</a>
+      </div>
+      <div id="logout" class="left-nav">
+        שלום, <a id="profile" href="profile.html"></a> (<a
+          id="logout-link"
+          href="main.html"
+          >התנתקות</a
+        >)
+      </div>
+    </nav>
+    <script src="scripts/header.js"></script>
+  </header>
   <body>
     <header dir="rtl">
       <nav>
@@ -253,5 +273,6 @@
         </div>
       </div>
     </section>
+    <script src="scripts/main.js"></script>
   </body>
 </html>
