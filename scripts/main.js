@@ -1,8 +1,9 @@
 if (!localStorage.user) {
   let links = document.querySelectorAll("a.game");
   for (let i = 0; i < links.length; i++) {
-    links[i].href = "";
     links[i].onclick = need_log_in;
+    // links[i].classList.add("a_hide");
+    links[i].href = "";
   }
 }
 function need_log_in() {

@@ -175,7 +175,8 @@ body {
   color: white;
   z-index: 20;
 }
-.hide-message {
+.hide-message,
+.a_hide {
   display: none;
 }
 
