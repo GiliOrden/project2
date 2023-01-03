@@ -161,7 +161,7 @@ body {
   transform: scale(1);
   bottom: 10%;
 }
-#game-over {
+#need_log_in {
   text-align: center;
   top: 25%;
   left: calc((100% - 550px) / 2);
@@ -180,7 +180,7 @@ body {
   display: none;
 }
 
-#game-over a {
+#need_log_in a {
   width: 90%;
 
   margin-top: 10px;
