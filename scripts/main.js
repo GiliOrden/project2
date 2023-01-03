@@ -8,4 +8,5 @@ if (!localStorage.user) {
 function need_log_in() {
   const massage = document.getElementById("game-over");
   massage.classList.remove("hide-message");
+  return false;
 }
