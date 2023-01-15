@@ -1,69 +1,96 @@
 <!DOCTYPE html>
 <html lang="he" dir="rtl">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="CSS/style.css" rel="stylesheet" type="text/css">
-    <link href="CSS/form.css" rel="stylesheet" type="text/css">
-    <link href="CSS/profile.css" rel="stylesheet" type="text/css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="CSS/style.css" rel="stylesheet" type="text/css" />
+    <link href="CSS/form.css" rel="stylesheet" type="text/css" />
+    <link href="CSS/profile.css" rel="stylesheet" type="text/css" />
     <title>פרופיל</title>
-</head>
-<body>
+  </head>
+  <body>
     <header>
-        <nav>
-            <div><a href="main.html" id="home-link" class="no-decoration">אתר המשחקים הגדול</a></div>
-            <div  id="login" class="left-nav"><a href="login.html"  class="no-decoration">התחברות</a></div>
-            <div id="logout" class="left-nav">שלום, <a id="profile" href="profile.html"></a> (<a id="logout-link" href="main.html">התנתקות</a>)</div>
-        </nav>
-        <script src="scripts/header.js"></script>
+      <nav>
+        <div>
+          <a href="main.html" id="home-link" class="no-decoration"
+            >אתר המשחקים הגדול</a
+          >
+        </div>
+        <div id="login" class="left-nav">
+          <a href="login.html" class="no-decoration">התחברות</a>
+        </div>
+        <div id="logout" class="left-nav">
+          שלום, <a id="profile" href="profile.html"></a> (<a
+            id="logout-link"
+            href="main.html"
+            >התנתקות</a
+          >)
+        </div>
+      </nav>
+      <script src="scripts/header.js"></script>
     </header>
     <main>
-        <h1>פרופיל אישי</h1>
-        <form method="post" class="big">
-            <div>
-                <label for="name">שם: </label>
-                <input type="text" id="name" name="name">
-                <button class="edit little" type="button"><img src="images/edit_icon.png" alt="עריכה"></button>
-            </div>
-            <div>
-                <label for="username">שם משתמש: </label>
-                <input type="text" id="username" name="username" readonly>
-                <button class="little" style="visibility: hidden;"></button>
-            </div>
-            <div class="inline-flex">
-                <label for="password">סיסמא: </label>
-                <input type="password" id="password" name="password">
-                <button id="edit-pass" class="edit little" type="button"><img src="images/edit_icon.png" alt="עריכה"></button>
-            </div>
-            <button id="see-pass" class="little out" type="button"><img src="images/see_icon.png" alt="הצצה"></button>
-            <div id="conPass">
-                <label for="password">אימות סיסמא: </label>
-                <input type="password" id="password2" name="password2" onchange="confirmPassword()">
-                <button class="little" style="visibility: hidden;"></button>
-            </div>
-            <div>
-                <label for="email">דוא"ל: </label>
-                <input type="email" id="email" name="email">
-                <button class="edit little" type="button"><img src="images/edit_icon.png" alt="עריכה"></button>
-            </div>
-            <div>
-                <label for="phone">מספר טלפון: </label>
-                <input type="tel" id="phone" name="phone">
-                <button class="edit little" type="button"><img src="images/edit_icon.png" alt="עריכה"></button>
-            </div>
-            <fieldset>
-                <legend>מפולת יהלומים</legend>
-                <p><strong>שיא: </strong><span id="high-diamond"></span>💎</p>
-                <p><strong>כניסה אחרונה: </strong><span id="date-diamond"></span></p>
-            </fieldset>
-            <fieldset>
-                <legend>משחק זכרון</legend>
-                <p><strong>שיא: </strong><span id="high-memory"></span></p>
-                <p><strong>כניסה אחרונה: </strong><span id="date-memory"></span></p>
-            </fieldset>
-        </form>
+      <h1>פרופיל אישי</h1>
+      <form method="post" class="big">
+        <div>
+          <label for="name">שם: </label>
+          <input type="text" id="name" name="name" />
+          <button class="edit little" type="button">
+            <img src="images/edit_icon.png" alt="עריכה" />
+          </button>
+        </div>
+        <div>
+          <label for="username">שם משתמש: </label>
+          <input type="text" id="username" name="username" readonly />
+          <button class="little" style="visibility: hidden"></button>
+        </div>
+        <div class="inline-flex">
+          <label for="password">סיסמא: </label>
+          <input type="password" id="password" name="password" />
+          <button id="edit-pass" class="edit little" type="button">
+            <img src="images/edit_icon.png" alt="עריכה" />
+          </button>
+        </div>
+        <button id="see-pass" class="little out" type="button">
+          <img src="images/see_icon.png" alt="הצצה" />
+        </button>
+        <div id="conPass">
+          <label for="password">אימות סיסמא: </label>
+          <input
+            type="password"
+            id="password2"
+            name="password2"
+            onchange="confirmPassword()"
+          />
+          <button class="little" style="visibility: hidden"></button>
+        </div>
+        <div>
+          <label for="email">דוא"ל: </label>
+          <input type="email" id="email" name="email" />
+          <button class="edit little" type="button">
+            <img src="images/edit_icon.png" alt="עריכה" />
+          </button>
+        </div>
+        <div>
+          <label for="phone">מספר טלפון: </label>
+          <input type="tel" id="phone" name="phone" />
+          <button class="edit little" type="button">
+            <img src="images/edit_icon.png" alt="עריכה" />
+          </button>
+        </div>
+        <fieldset>
+          <legend>מפולת יהלומים</legend>
+          <p><strong>שיא: </strong><span id="high-diamond"></span>💎</p>
+          <p><strong>כניסה אחרונה: </strong><span id="date-diamond"></span></p>
+        </fieldset>
+        <fieldset>
+          <legend>משחק זכרון</legend>
+          <p><strong>שיא: </strong><span id="high-memory"></span></p>
+          <p><strong>כניסה אחרונה: </strong><span id="date-memory"></span></p>
+        </fieldset>
+      </form>
     </main>
-</body>
-<script src="scripts/profile.js"></script>
+  </body>
+  <script src="scripts/profile.js"></script>
 </html>
